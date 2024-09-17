@@ -1,0 +1,26 @@
+name: Update Images JSON
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Run Update Script
+      run: |
+        pip install dropbox
+        python update_json.py
+
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        git add images.json
+        git commit -m 'Update images JSON'
+        git push
