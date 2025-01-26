@@ -1,0 +1,209 @@
+---
+import { useTranslations } from '../i18n/utils';
+
+const lang = Astro.currentLocale || 'nl';
+const t = useTranslations(lang);
+
+const services = [
+  {
+    id: 'airco',
+    title: t('services.airco.title'),
+    description: t('services.airco.description'),
+    images: [
+      '/images/airco/1.png',
+      '/images/airco/2.png'
+    ]
+  },
+  {
+    id: 'badkamer',
+    title: t('services.badkamer.title'),
+    description: t('services.badkamer.description'),
+    images: [
+      '/images/badkamer/1.png',
+      '/images/badkamer/2.png'
+    ]
+  },
+  {
+    id: 'heating',
+    title: t('services.heating.title'),
+    description: t('services.heating.description'),
+    images: [
+      '/images/heating/1.png',
+      '/images/heating/2.png'
+    ]
+  },
+  {
+    id: 'vloerverwarming',
+    title: t('services.vloerverwarming.title'),
+    description: t('services.vloerverwarming.description'),
+    images: [
+      '/images/vloerverwarming/1.png',
+      '/images/vloerverwarming/2.png'
+    ]
+  }
+];
+---
+
+{services.map(service => (
+  <section id={service.id} class="scroll-section flex flex-col relative">
+    <!-- Image Section -->
+    <div class="h-[70vh] relative">
+      <div class="swiper h-full" id={`swiper-${service.id}`}>
+        <div class="swiper-wrapper">
+          {service.images.map(image => (
+            <div class="swiper-slide">
+              <img 
+                src={image}
+                alt={service.title}
+                class="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+        <!-- Navigation arrows -->
+        <div class={`swiper-button-next swiper-button-next-${service.id}`}></div>
+        <div class={`swiper-button-prev swiper-button-prev-${service.id}`}></div>
+        <!-- Pagination -->
+        <div class={`swiper-pagination swiper-pagination-${service.id}`}></div>
+      </div>
+    </div>
+
+    <!-- Text Section -->
+    <div class="bg-white py-10 relative">
+      <div class="max-w-4xl mx-auto text-center px-4">
+        <h2 class="text-4xl font-bold mb-6 text-gray-800">{service.title}</h2>
+        <p class="text-xl text-gray-600">{service.description}</p>
+        
+        <!-- Add Quota Button -->
+        <button 
+          class="quota-btn fixed bottom-8 left-8 bg-[var(--primary-red)] text-[var(--primary-white)] px-6 py-3 rounded-lg shadow-lg hover:opacity-90 transition-colors z-10"
+          data-service={service.id}
+        >
+          {t('quote.requestQuote')}
+        </button>
+      </div>
+    </div>
+  </section>
+))}
+
+<!-- Add Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Add Swiper JS -->
+<script is:inline src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+  function initSwipers() {
+    if (typeof Swiper === 'undefined') {
+      // If Swiper is not loaded yet, try again in 100ms
+      setTimeout(initSwipers, 100);
+      return;
+    }
+
+    const services = ['airco', 'badkamer', 'heating', 'vloerverwarming'];
+    
+    services.forEach(serviceId => {
+      const swiperElement = document.querySelector(`#swiper-${serviceId}`);
+      if (!swiperElement) return;
+
+      new Swiper(`#swiper-${serviceId}`, {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: `.swiper-button-next-${serviceId}`,
+          prevEl: `.swiper-button-prev-${serviceId}`,
+        },
+        pagination: {
+          el: `.swiper-pagination-${serviceId}`,
+          clickable: true,
+        },
+      });
+    });
+  }
+
+  // Initialize Swipers when the script loads
+  initSwipers();
+
+  // Re-initialize Swipers when the page content updates
+  document.addEventListener('astro:page-load', initSwipers);
+
+  // Add this after the existing Swiper initialization code
+  document.querySelectorAll('.quota-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Get current language from URL or default to root path
+      const currentPath = window.location.pathname;
+      const basePath = currentPath === '/' || currentPath === '/nl' ? '' : currentPath.split('/')[1];
+      // Navigate to contact section while preserving the language
+      window.location.href = basePath ? `/${basePath}/#contact` : '/#contact';
+    });
+  });
+</script>
+
+<style>
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Customize navigation buttons */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-size: 1.5rem;
+  }
+
+  /* Customize pagination */
+  .swiper-pagination-bullet {
+    background: white;
+    opacity: 0.7;
+    width: 10px;
+    height: 10px;
+    margin: 0 6px;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: white;
+  }
+
+  /* Position pagination at bottom of image */
+  .swiper-pagination {
+    bottom: 20px !important;
+  }
+
+  .quota-btn {
+    transition: all 0.3s ease;
+  }
+
+  .quota-btn:hover {
+    transform: translateY(-2px);
+  }
+</style> 

@@ -1,0 +1,417 @@
+---
+import { useTranslations } from '../i18n/utils';
+
+const lang = Astro.currentLocale || 'nl';
+const t = useTranslations(lang);
+
+const services = [
+  {
+    id: 'airco',
+    title: t('services.airco.title'),
+    fields: [
+      { name: 'squareMeters', label: t('services.airco.fields.squareMeters'), type: 'number' },
+      { name: 'roomCount', label: t('services.airco.fields.roomCount'), type: 'number' },
+      { name: 'buildingType', label: t('services.airco.fields.buildingType'), type: 'select',
+        options: [
+          { value: 'apartment', label: t('services.airco.options.apartment') },
+          { value: 'house', label: t('services.airco.options.house') },
+          { value: 'office', label: t('services.airco.options.office') },
+          { value: 'other', label: t('services.airco.options.other') }
+        ] }
+    ]
+  },
+  {     
+    id: 'badkamer',
+    title: t('services.badkamer.title'),
+    fields: [
+      { name: 'bathroomSize', label: t('services.badkamer.fields.bathroomSize'), type: 'number' },
+      { name: 'renovationType', label: t('services.badkamer.fields.renovationType'), type: 'select',
+        options: [
+          { value: 'complete', label: t('services.badkamer.options.complete') },
+          { value: 'partial', label: t('services.badkamer.options.partial') },
+          { value: 'installOnly', label: t('services.badkamer.options.installOnly') }
+        ] },
+      { name: 'currentState', label: t('services.badkamer.fields.currentState'), type: 'select',
+        options: [
+          { value: 'new', label: t('services.badkamer.options.new') },
+          { value: 'existing', label: t('services.badkamer.options.existing') },
+          { value: 'empty', label: t('services.badkamer.options.empty') }
+        ] }
+    ]
+  },
+  {
+    id: 'heating',
+    title: t('services.heating.title'),
+    fields: [
+      { name: 'houseSize', label: t('services.heating.fields.houseSize'), type: 'number' },
+      { name: 'currentSystem', label: t('services.heating.fields.currentSystem'), type: 'select',
+        options: [
+          { value: 'centralHeating', label: t('services.heating.options.centralHeating') },
+          { value: 'heatPump', label: t('services.heating.options.heatPump') },
+          { value: 'none', label: t('services.heating.options.none') },
+          { value: 'other', label: t('services.heating.options.other') }
+        ] },
+      { name: 'buildingYear', label: t('services.heating.fields.buildingYear'), type: 'number' }
+    ]
+  },
+  {
+    id: 'vloerverwarming',
+    title: t('services.vloerverwarming.title'),
+    fields: [
+      { name: 'floorArea', label: t('services.vloerverwarming.fields.floorArea'), type: 'number' },
+      { name: 'floorType', label: t('services.vloerverwarming.fields.floorType'), type: 'select',
+        options: [
+          { value: 'existing', label: t('services.vloerverwarming.options.existing') },
+          { value: 'new', label: t('services.vloerverwarming.options.new') },
+          { value: 'renovation', label: t('services.vloerverwarming.options.renovation') }
+        ] },
+      { name: 'currentHeating', label: t('services.vloerverwarming.fields.currentHeating'), type: 'select',
+        options: [
+          { value: 'radiators', label: t('services.vloerverwarming.options.radiators') },
+          { value: 'none', label: t('services.vloerverwarming.options.none') },
+          { value: 'other', label: t('services.vloerverwarming.options.other') }
+        ] }
+    ]
+  }
+];
+
+const commonFields = [
+  { name: 'name', label: t('form.fullName'), type: 'text', required: true },
+  { name: 'email', label: t('form.email'), type: 'email', required: true },
+  { name: 'phone', label: t('form.phone'), type: 'tel', required: true },
+  { name: 'address', label: t('form.address'), type: 'text', required: true },
+  { name: 'comments', label: t('form.comments'), type: 'textarea' }
+];
+---
+
+<section id="contact" class="scroll-section min-h-screen bg-gray-50 pt-24">
+  <div class="max-w-6xl mx-auto px-4">
+    <div class="text-center">
+      <h2 class="text-4xl font-bold mb-6">{t('contact.title')}</h2>
+      <button 
+        id="initialQuoteBtn" 
+        type="button" 
+        class="bg-[var(--primary-red)] text-[var(--primary-white)] text-lg py-3 px-6 rounded-lg hover:opacity-90 transition-colors mb-8"
+      >
+        {t('quote.requestQuote')}
+      </button>
+    </div>
+
+    <!-- Main Contact Content -->
+    <div id="mainContent" class="grid md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-2xl font-semibold mb-6">{t('contact.getInTouch')}</h3>
+        <div class="space-y-4">
+          <p>
+            <strong>{t('contact.address')}:</strong><br />
+            Wittemstraat 23, 1106 RC Amsterdam
+          </p>
+          <p>
+            <strong>{t('contact.phone')}:</strong><br />
+            +31 6 53212687
+          </p>
+          <p>
+            <strong>{t('contact.email')}:</strong><br />
+            info@heatnederland.nl
+          </p>
+        </div>
+        
+        <!-- Add Certificates -->
+        <div class="flex gap-4 mt-8">
+          <img 
+            src="/images/certificates/cert1.jpeg" 
+            alt="KIWA Certification" 
+            class="h-24 object-contain"
+          />
+          <img 
+            src="/images/certificates/cert2.jpeg" 
+            alt="CO2 Free Certification" 
+            class="h-24 object-contain"
+          />
+        </div>
+      </div>
+      <div class="rounded-lg overflow-hidden h-[400px]">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2438.7793808690583!2d4.9582344!3d52.3139595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60b97f2c5c2f7%3A0x5a8b76357985f5f!2sWittemstraat%2023%2C%201106%20RC%20Amsterdam!5e0!3m2!1sen!2snl!4v1705247161099!5m2!1sen!2snl"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+
+    <!-- Quote Section (Initially Hidden) -->
+    <div id="quoteSection" class="hidden py-4">
+      <!-- Return Button -->
+      <button 
+        id="returnToContact" 
+        type="button" 
+        class="mb-6 text-[var(--primary-red)] hover:opacity-80 flex items-center"
+      >
+        <span class="text-lg mr-2">←</span> {t('quote.returnToContact')}
+      </button>
+
+      <!-- Service Selection -->
+      <div id="serviceSelection" class="mb-8">
+        <h3 class="text-xl font-semibold mb-4 text-center">{t('quote.selectService')}</h3>
+        <div class="grid grid-cols-2 gap-3">
+          {services.map(service => (
+            <button
+              type="button"
+              class="service-btn p-4 border-2 border-[var(--primary-red)] rounded-lg hover:bg-[var(--primary-red)] hover:text-[var(--primary-white)] transition-colors"
+              data-service={service.id}
+            >
+              {service.title}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <!-- Dynamic Forms -->
+      {services.map(service => (
+        <form
+          id={`form-${service.id}`}
+          class="quote-form hidden bg-white p-4 rounded-lg shadow-lg"
+          data-service={service.id}
+        >
+          <div class="flex items-center mb-4">
+            <button type="button" class="back-to-services mr-3 text-blue-500 hover:text-blue-600">
+              <span class="text-lg">←</span>
+            </button>
+            <h3 class="text-xl font-semibold">{service.title}</h3>
+          </div>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <!-- Service Specific Fields -->
+            <div class="space-y-3">
+              {service.fields.map(field => (
+                <div class="form-group">
+                  <label class="block text-sm font-medium text-gray-700 mb-1">
+                    {field.label}
+                  </label>
+                  {field.type === 'select' ? (
+                    <select
+                      name={field.name}
+                      class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                      required
+                    >
+                      <option value="">{t('form.select')}</option>
+                      {field.options?.map(option => (
+                        <option value={option.value}>{option.label}</option>
+                      ))}
+                    </select>
+                  ) : (
+                    <input
+                      type={field.type}
+                      name={field.name}
+                      class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                      required
+                    />
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <!-- Common Fields -->
+            <div class="space-y-3">
+              {commonFields.map(field => (
+                <div class="form-group">
+                  <label class="block text-sm font-medium text-gray-700 mb-1">
+                    {field.label} {field.required && <span class="text-red-500">*</span>}
+                  </label>
+                  {field.type === 'textarea' ? (
+                    <textarea
+                      name={field.name}
+                      rows="3"
+                      class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                      required={field.required}
+                    ></textarea>
+                  ) : (
+                    <input
+                      type={field.type}
+                      name={field.name}
+                      class="w-full p-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                      required={field.required}
+                    />
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 transition-colors"
+          >
+            {t('quote.calculate')}
+          </button>
+        </form>
+      ))}
+    </div>
+
+    <!-- Quote Result Modal -->
+    <div id="quoteModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <div class="bg-white p-4 rounded-lg max-w-md w-full mx-4">
+        <h3 class="text-xl font-bold mb-3">{t('quote.result.title')}</h3>
+        <div id="quoteResult" class="mb-4"></div>
+        <button
+          id="closeModal"
+          class="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors"
+        >
+          {t('quote.result.close')}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ t }}>
+  const mainContent = document.getElementById('mainContent');
+  const quoteSection = document.getElementById('quoteSection');
+  const initialQuoteBtn = document.getElementById('initialQuoteBtn');
+  const returnToContact = document.getElementById('returnToContact');
+  const serviceSelection = document.getElementById('serviceSelection');
+  const serviceBtns = document.querySelectorAll('.service-btn');
+  const quoteForms = document.querySelectorAll('.quote-form');
+  const backButtons = document.querySelectorAll('.back-to-services');
+  const modal = document.getElementById('quoteModal');
+  const closeModal = document.getElementById('closeModal');
+  const quoteResult = document.getElementById('quoteResult');
+
+  // Show quote section
+  initialQuoteBtn?.addEventListener('click', () => {
+    mainContent?.classList.add('hidden');
+    initialQuoteBtn?.classList.add('hidden');
+    quoteSection?.classList.remove('hidden');
+  });
+
+  // Return to contact
+  returnToContact?.addEventListener('click', () => {
+    quoteSection?.classList.add('hidden');
+    quoteForms.forEach(form => form.classList.add('hidden'));
+    serviceSelection?.classList.remove('hidden');
+    mainContent?.classList.remove('hidden');
+    initialQuoteBtn?.classList.remove('hidden');
+  });
+
+  // Show selected service form
+  serviceBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const serviceId = btn.dataset.service;
+      serviceSelection?.classList.add('hidden');
+      document.getElementById(`form-${serviceId}`)?.classList.remove('hidden');
+    });
+  });
+
+  // Back button functionality
+  backButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      quoteForms.forEach(form => form.classList.add('hidden'));
+      serviceSelection?.classList.remove('hidden');
+    });
+  });
+
+  // Form submission handling
+  quoteForms.forEach(form => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const serviceId = form.dataset.service;
+
+      // Calculate price range
+      let basePrice = 0;
+      switch(serviceId) {
+        case 'airco':
+          basePrice = Number(formData.get('squareMeters')) * 100;
+          break;
+        case 'badkamer':
+          basePrice = Number(formData.get('bathroomSize')) * 500;
+          break;
+        case 'heating':
+          basePrice = Number(formData.get('houseSize')) * 150;
+          break;
+        case 'vloerverwarming':
+          basePrice = Number(formData.get('floorArea')) * 200;
+          break;
+      }
+
+      const priceRange = {
+        min: Math.round(basePrice * 0.8),
+        max: Math.round(basePrice * 1.2)
+      };
+
+      try {
+        // Send data to our API endpoint
+        const response = await fetch('/api/send-quote', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            serviceId,
+            formData: Object.fromEntries(formData),
+            priceRange
+          })
+        });
+
+        const result = await response.json();
+        
+        if (!result.success) {
+          throw new Error('Failed to send quote');
+        }
+
+        // Show result modal with translated text
+        quoteResult.innerHTML = `
+          <p class="mb-4">${t('quote.result.priceRange')}</p>
+          <p class="text-2xl font-bold text-blue-600">€${priceRange.min} - €${priceRange.max}</p>
+          <p class="mt-4 text-sm text-gray-600">${t('quote.result.thankYou')}</p>
+        `;
+        modal?.classList.remove('hidden');
+        
+        // Reset everything
+        form.reset();
+        form.classList.add('hidden');
+        serviceSelection?.classList.remove('hidden');
+        quoteSection?.classList.add('hidden');
+        mainContent?.classList.remove('hidden');
+        initialQuoteBtn?.classList.remove('hidden');
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Er is een fout opgetreden. Probeer het later opnieuw.');
+      }
+    });
+  });
+
+  // Close modal
+  closeModal?.addEventListener('click', () => {
+    modal?.classList.add('hidden');
+  });
+
+  // Close modal on outside click
+  modal?.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal?.classList.add('hidden');
+    }
+  });
+</script>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .form-group {
+    transition: all 0.3s ease;
+  }
+
+  .form-group:focus-within {
+    transform: translateY(-2px);
+  }
+
+  .service-btn.active {
+    background-color: #3B82F6;
+    color: white;
+  }
+</style> 

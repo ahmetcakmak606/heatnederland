@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "title": "Heat Nederland",
+    "subtitle": "İklimlendirme ve tesisat uzmanınız",
+    "cta": "Hizmetlerimizi görüntüleyin"
+  },
+  "contact": {
+    "title": "İletişim",
+    "getInTouch": "Bizimle İletişime Geçin",
+    "address": "Adres",
+    "phone": "Telefon",
+    "email": "E-posta"
+  },
+  "quote": {
+    "button": "Fiyat Hesapla",
+    "returnToContact": "İletişime Dön",
+    "selectService": "Hizmet Seçin",
+    "calculate": "Fiyat Hesapla",
+    "result": {
+      "title": "Fiyat Teklifiniz",
+      "priceRange": "Verdiğiniz bilgilere göre tahmini fiyat aralığı:",
+      "thankYou": "İlginiz için teşekkürler! Ek bilgiye ihtiyaç duyarsak sizinle iletişime geçeceğiz.",
+      "close": "Kapat"
+    }
+  },
+  "services": {
+    "airco": {
+      "title": "Klima",
+      "description": "Eviniz veya işyeriniz için profesyonel klima kurulumu ve optimum konfor",
+      "fields": {
+        "squareMeters": "Alan (m²)",
+        "roomCount": "Oda Sayısı",
+        "buildingType": "Bina Tipi"
+      },
+      "options": {
+        "apartment": "Apartman Dairesi",
+        "house": "Müstakil Ev",
+        "office": "Ofis",
+        "other": "Diğer"
+      }
+    },
+    "badkamer": {
+      "title": "Banyo Kurulumu",
+      "description": "Detaylara özen gösterilerek yapılan tam banyo yenileme ve kurulum hizmeti",
+      "fields": {
+        "bathroomSize": "Banyo Alanı (m²)",
+        "renovationType": "Yenileme Tipi",
+        "currentState": "Mevcut Durum"
+      },
+      "options": {
+        "complete": "Tam Yenileme",
+        "partial": "Kısmi Yenileme",
+        "installOnly": "Sadece Kurulum",
+        "new": "Yeni İnşaat",
+        "existing": "Mevcut Banyo",
+        "empty": "Boş Alan"
+      }
+    },
+    "heating": {
+      "title": "Isıtma Sistemleri",
+      "description": "Eviniz için modern ve enerji tasarruflu ısıtma çözümleri",
+      "fields": {
+        "houseSize": "Ev Alanı (m²)",
+        "currentSystem": "Mevcut Sistem",
+        "buildingYear": "Bina Yapım Yılı"
+      },
+      "options": {
+        "centralHeating": "Merkezi Isıtma",
+        "heatPump": "Isı Pompası",
+        "none": "Sistem Yok",
+        "other": "Diğer"
+      }
+    },
+    "vloerverwarming": {
+      "title": "Yerden Isıtma",
+      "description": "Tüm eviniz için konforlu ve verimli yerden ısıtma sistemleri",
+      "fields": {
+        "floorArea": "Zemin Alanı (m²)",
+        "floorType": "Zemin Tipi",
+        "currentHeating": "Mevcut Isıtma"
+      },
+      "options": {
+        "existing": "Mevcut Zemin",
+        "new": "Yeni İnşaat",
+        "renovation": "Yenileme",
+        "radiators": "Radyatörler",
+        "none": "Yok",
+        "other": "Diğer"
+      }
+    }
+  },
+  "form": {
+    "fullName": "Ad Soyad",
+    "email": "E-posta Adresi",
+    "phone": "Telefon Numarası",
+    "address": "Adres",
+    "comments": "Ek Notlar",
+    "required": "Zorunlu",
+    "select": "Seçim yapın"
+  },
+  "error": {
+    "failed": "Bir hata oluştu. Lütfen daha sonra tekrar deneyin."
+  }
+} 

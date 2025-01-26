@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "services": "Hizmetler",
+    "contact": "İletişim"
+  },
+  "hero": {
+    "title": "HeatNederland",
+    "subtitle": "Konforunuz Önceliğimizdir",
+    "cta": "Hizmetlerimiz"
+  },
+  "services": {
+    "title": "Hizmetlerimiz",
+    "airco": {
+      "title": "Klima Sistemleri",
+      "description": "Optimum iç mekan iklim kontrolü için profesyonel klima sistemi kurulumu ve bakımı."
+    },
+    "badkamer": {
+      "title": "Banyo Kurulumu",
+      "description": "Detaylara özen gösterilerek yapılan komple banyo yenileme ve kurulum hizmetleri."
+    },
+    "heating": {
+      "title": "Isıtma Sistemleri",
+      "description": "Eviniz veya işyeriniz için uzman ısıtma sistemi kurulumu ve bakımı."
+    },
+    "vloerverwarming": {
+      "title": "Yerden Isıtma",
+      "description": "Maksimum konfor için enerji tasarruflu yerden ısıtma çözümleri."
+    }
+  },
+  "contact": {
+    "title": "İletişim",
+    "getInTouch": "Bize Ulaşın",
+    "address": "Adres",
+    "phone": "Telefon",
+    "email": "E-posta"
+  },
+  "quote": {
+    "requestQuote": "Fiyat Teklifi Al",
+    "returnToContact": "İletişime Geri Dön",
+    "selectService": "Hizmet Seçin",
+    "calculate": "Fiyat Hesapla",
+    "result": {
+      "title": "Fiyat Teklifiniz",
+      "priceRange": "Verdiğiniz bilgilere göre tahmini fiyat aralığınız:",
+      "thankYou": "İlginiz için teşekkür ederiz! Ek bilgiye ihtiyacımız olursa sizinle iletişime geçeceğiz.",
+      "close": "Kapat"
+    }
+  }
+} 

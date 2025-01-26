@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Diensten",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "HeatNederland",
+    "subtitle": "Uw Comfort is Onze Prioriteit",
+    "cta": "Onze Diensten"
+  },
+  "services": {
+    "title": "Onze Diensten",
+    "airco": {
+      "title": "Airconditioning",
+      "description": "Professionele installatie en onderhoud van airconditioningsystemen voor optimale klimaatbeheersing."
+    },
+    "badkamer": {
+      "title": "Badkamer Installatie",
+      "description": "Complete badkamerrenovatie en installatiediensten met oog voor detail."
+    },
+    "heating": {
+      "title": "Verwarmingssystemen",
+      "description": "Deskundige installatie en onderhoud van verwarmingssystemen voor uw huis of bedrijf."
+    },
+    "vloerverwarming": {
+      "title": "Vloerverwarming",
+      "description": "Energiezuinige vloerverwarmingsoplossingen voor maximaal comfort."
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "getInTouch": "Neem Contact Op",
+    "address": "Adres",
+    "phone": "Telefoon",
+    "email": "E-mail"
+  },
+  "quote": {
+    "requestQuote": "Bereken uw offerte",
+    "returnToContact": "Terug naar contact",
+    "selectService": "Kies uw service",
+    "calculate": "Bereken offerte",
+    "result": {
+      "title": "Uw offerte",
+      "priceRange": "Op basis van de door u verstrekte informatie is dit uw geschatte prijsindicatie:",
+      "thankYou": "Bedankt voor uw interesse! Wij nemen contact met u op als we aanvullende informatie nodig hebben.",
+      "close": "Sluiten"
+    }
+  }
+} 

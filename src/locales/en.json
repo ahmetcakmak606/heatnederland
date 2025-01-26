@@ -1,0 +1,50 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "HeatNederland",
+    "subtitle": "Your Comfort is Our Priority",
+    "cta": "Our Services"
+  },
+  "services": {
+    "title": "Our Services",
+    "airco": {
+      "title": "Air Conditioning",
+      "description": "Professional installation and maintenance of air conditioning systems for optimal indoor climate control."
+    },
+    "badkamer": {
+      "title": "Bathroom Installation",
+      "description": "Complete bathroom renovation and installation services with attention to detail."
+    },
+    "heating": {
+      "title": "Heating Systems",
+      "description": "Expert installation and maintenance of heating systems for your home or business."
+    },
+    "vloerverwarming": {
+      "title": "Floor Heating",
+      "description": "Energy-efficient floor heating solutions for maximum comfort."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "getInTouch": "Get in Touch",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email"
+  },
+  "quote": {
+    "requestQuote": "Calculate Your Quote",
+    "returnToContact": "Back to Contact",
+    "selectService": "Select Your Service",
+    "calculate": "Calculate Quote",
+    "result": {
+      "title": "Your Quote",
+      "priceRange": "Based on the information provided, here is your estimated price range:",
+      "thankYou": "Thank you for your interest! We will contact you if we need additional information.",
+      "close": "Close"
+    }
+  }
+} 

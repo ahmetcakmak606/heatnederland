@@ -1,0 +1,20 @@
+---
+import { useTranslations } from '../i18n/utils';
+
+const lang = Astro.currentLocale || 'nl';
+const t = useTranslations(lang);
+---
+
+<section id="home" class="scroll-section relative flex items-center justify-center min-h-screen">
+  <div class="absolute inset-0 bg-[var(--primary-bg)]"></div>
+  <div class="relative z-10 text-center text-[var(--primary-white)]">
+    <h1 class="text-6xl font-bold mb-4">{t('hero.title')}</h1>
+    <p class="text-2xl mb-8">{t('hero.subtitle')}</p>
+    <a 
+      href="#airco" 
+      class="inline-block bg-[var(--primary-red)] text-[var(--primary-white)] px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-colors"
+    >
+      {t('hero.cta')}
+    </a>
+  </div>
+</section> 

@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "title": "Heat Nederland",
+    "subtitle": "Uw specialist in klimaatbeheersing en sanitair",
+    "cta": "Bekijk onze diensten"
+  },
+  "contact": {
+    "title": "Contact",
+    "getInTouch": "Neem Contact Op",
+    "address": "Adres",
+    "phone": "Telefoon",
+    "email": "E-mail"
+  },
+  "quote": {
+    "button": "Bereken Uw Offerte",
+    "returnToContact": "Terug naar Contact",
+    "selectService": "Selecteer Uw Service",
+    "calculate": "Bereken Offerte",
+    "result": {
+      "title": "Uw Offerte",
+      "priceRange": "Op basis van de verstrekte informatie is dit uw geschatte prijsrange:",
+      "thankYou": "Bedankt voor uw interesse! We nemen contact met u op als we aanvullende informatie nodig hebben.",
+      "close": "Sluiten"
+    }
+  },
+  "services": {
+    "airco": {
+      "title": "Airconditioning",
+      "description": "Professionele airconditioning installatie voor optimaal comfort in uw woning of bedrijf",
+      "fields": {
+        "squareMeters": "Oppervlakte (m²)",
+        "roomCount": "Aantal Kamers",
+        "buildingType": "Type Gebouw"
+      },
+      "options": {
+        "apartment": "Appartement",
+        "house": "Huis",
+        "office": "Kantoor",
+        "other": "Anders"
+      }
+    },
+    "badkamer": {
+      "title": "Badkamer Installatie",
+      "description": "Complete badkamer renovatie en installatie met oog voor detail en kwaliteit",
+      "fields": {
+        "bathroomSize": "Badkamer Oppervlakte (m²)",
+        "renovationType": "Type Renovatie",
+        "currentState": "Huidige Staat"
+      },
+      "options": {
+        "complete": "Complete Renovatie",
+        "partial": "Gedeeltelijke Renovatie",
+        "installOnly": "Alleen Installatie",
+        "new": "Nieuwbouw",
+        "existing": "Bestaande Badkamer",
+        "empty": "Lege Ruimte"
+      }
+    },
+    "heating": {
+      "title": "Verwarmingssystemen",
+      "description": "Moderne en energiezuinige verwarmingsoplossingen voor uw woning",
+      "fields": {
+        "houseSize": "Woning Oppervlakte (m²)",
+        "currentSystem": "Huidig Systeem",
+        "buildingYear": "Bouwjaar"
+      },
+      "options": {
+        "centralHeating": "CV-Ketel",
+        "heatPump": "Warmtepomp",
+        "none": "Geen Systeem",
+        "other": "Anders"
+      }
+    },
+    "vloerverwarming": {
+      "title": "Vloerverwarming",
+      "description": "Comfortabele en efficiënte vloerverwarming voor uw gehele woning",
+      "fields": {
+        "floorArea": "Vloeroppervlak (m²)",
+        "floorType": "Type Vloer",
+        "currentHeating": "Huidige Verwarming"
+      },
+      "options": {
+        "existing": "Bestaande Vloer",
+        "new": "Nieuwbouw",
+        "renovation": "Renovatie",
+        "radiators": "Radiatoren",
+        "none": "Geen",
+        "other": "Anders"
+      }
+    }
+  },
+  "form": {
+    "fullName": "Volledige Naam",
+    "email": "E-mailadres",
+    "phone": "Telefoonnummer",
+    "address": "Adres",
+    "comments": "Aanvullende Opmerkingen",
+    "required": "Verplicht",
+    "select": "Selecteer een optie"
+  },
+  "error": {
+    "failed": "Er is een fout opgetreden. Probeer het later opnieuw."
+  }
+} 

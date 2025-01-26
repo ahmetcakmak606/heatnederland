@@ -1,0 +1,104 @@
+{
+  "hero": {
+    "title": "Heat Nederland",
+    "subtitle": "Your specialist in climate control and plumbing",
+    "cta": "View our services"
+  },
+  "contact": {
+    "title": "Contact",
+    "getInTouch": "Get in Touch",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email"
+  },
+  "quote": {
+    "button": "Calculate Your Quote",
+    "returnToContact": "Back to Contact",
+    "selectService": "Select Your Service",
+    "calculate": "Calculate Quote",
+    "result": {
+      "title": "Your Quote",
+      "priceRange": "Based on the information provided, here's your estimated price range:",
+      "thankYou": "Thank you for your interest! We'll contact you if we need any additional information.",
+      "close": "Close"
+    }
+  },
+  "services": {
+    "airco": {
+      "title": "Air Conditioning",
+      "description": "Professional air conditioning installation for optimal comfort in your home or business",
+      "fields": {
+        "squareMeters": "Area (m²)",
+        "roomCount": "Number of Rooms",
+        "buildingType": "Building Type"
+      },
+      "options": {
+        "apartment": "Apartment",
+        "house": "House",
+        "office": "Office",
+        "other": "Other"
+      }
+    },
+    "badkamer": {
+      "title": "Bathroom Installation",
+      "description": "Complete bathroom renovation and installation with attention to detail and quality",
+      "fields": {
+        "bathroomSize": "Bathroom Size (m²)",
+        "renovationType": "Renovation Type",
+        "currentState": "Current State"
+      },
+      "options": {
+        "complete": "Complete Renovation",
+        "partial": "Partial Renovation",
+        "installOnly": "Installation Only",
+        "new": "New Construction",
+        "existing": "Existing Bathroom",
+        "empty": "Empty Space"
+      }
+    },
+    "heating": {
+      "title": "Heating Systems",
+      "description": "Modern and energy-efficient heating solutions for your home",
+      "fields": {
+        "houseSize": "House Size (m²)",
+        "currentSystem": "Current System",
+        "buildingYear": "Building Year"
+      },
+      "options": {
+        "centralHeating": "Central Heating",
+        "heatPump": "Heat Pump",
+        "none": "No System",
+        "other": "Other"
+      }
+    },
+    "vloerverwarming": {
+      "title": "Floor Heating",
+      "description": "Comfortable and efficient floor heating for your entire home",
+      "fields": {
+        "floorArea": "Floor Area (m²)",
+        "floorType": "Floor Type",
+        "currentHeating": "Current Heating"
+      },
+      "options": {
+        "existing": "Existing Floor",
+        "new": "New Construction",
+        "renovation": "Renovation",
+        "radiators": "Radiators",
+        "none": "None",
+        "other": "Other"
+      }
+    }
+  },
+  "form": {
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "address": "Address",
+    "comments": "Additional Comments",
+    "required": "Required",
+    "select": "Select an option"
+  },
+  "error": {
+    "failed": "An error occurred. Please try again later."
+  }
+} 
