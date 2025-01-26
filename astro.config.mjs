@@ -6,7 +6,7 @@ export default defineConfig({
   integrations: [
     tailwind(),
   ],
-  output: 'server',
+  output: 'static',
   adapter: node({
     mode: 'standalone'
   }),
