@@ -1,5 +1,6 @@
 ---
 import { useTranslations } from '../i18n/utils';
+import { getAssetPath } from '../utils/paths';
 
 const lang = Astro.currentLocale || 'nl';
 const t = useTranslations(lang);
@@ -119,12 +120,12 @@ const commonFields = [
         <!-- Add Certificates -->
         <div class="flex gap-4 mt-8">
           <img 
-            src="/images/certificates/cert1.jpeg" 
+            src={getAssetPath('/images/certificates/cert1.jpeg')}
             alt="KIWA Certification" 
             class="h-24 object-contain"
           />
           <img 
-            src="/images/certificates/cert2.jpeg" 
+            src={getAssetPath('/images/certificates/cert2.jpeg')}
             alt="CO2 Free Certification" 
             class="h-24 object-contain"
           />

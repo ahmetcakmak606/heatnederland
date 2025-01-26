@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import { getLanguageFromURL, useTranslations } from '../i18n/utils';
 import '../styles/colors.css';
+import { getAssetPath } from '../utils/paths';
 
 interface Props {
   title: string;
@@ -21,9 +22,9 @@ const navItems = [
 ];
 
 const languageLinks = [
-  { code: 'nl', href: '/', label: 'NL' },
-  { code: 'en', href: '/en', label: 'EN' },
-  { code: 'tr', href: '/tr', label: 'TR' }
+  { code: 'nl', href: getAssetPath('/'), label: 'NL' },
+  { code: 'en', href: getAssetPath('/en'), label: 'EN' },
+  { code: 'tr', href: getAssetPath('/tr'), label: 'TR' }
 ];
 ---
 

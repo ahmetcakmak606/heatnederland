@@ -1,5 +1,6 @@
 ---
 import { useTranslations } from '../i18n/utils';
+import { getAssetPath } from '../utils/paths';
 
 const lang = Astro.currentLocale || 'nl';
 const t = useTranslations(lang);
@@ -10,8 +11,8 @@ const services = [
     title: t('services.airco.title'),
     description: t('services.airco.description'),
     images: [
-      '/images/airco/1.png',
-      '/images/airco/2.png'
+      getAssetPath('/images/airco/1.png'),
+      getAssetPath('/images/airco/2.png')
     ]
   },
   {
@@ -19,8 +20,8 @@ const services = [
     title: t('services.badkamer.title'),
     description: t('services.badkamer.description'),
     images: [
-      '/images/badkamer/1.png',
-      '/images/badkamer/2.png'
+      getAssetPath('/images/badkamer/1.png'),
+      getAssetPath('/images/badkamer/2.png')
     ]
   },
   {

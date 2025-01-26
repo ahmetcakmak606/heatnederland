@@ -1,10 +1,12 @@
+import { getAssetPath } from '../utils/paths';
+
 <header class="fixed top-0 left-0 w-full bg-[var(--primary-bg)] z-50">
   <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-    <a href="/" class="flex items-center">
+    <a href={getAssetPath('/')} class="flex items-center">
       <img 
-        src="/images/logos/logo4.jpeg" 
+        src={getAssetPath('/images/logos/logo4.jpeg')}
         alt="Heat Nederland" 
-        class="h-12 object-contain"
+        class="h-20 object-contain"
       />
     </a>
     <div class="flex items-center space-x-6">
