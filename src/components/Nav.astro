@@ -1,4 +1,8 @@
+import { useTranslations } from '../i18n/utils';
 import { getAssetPath } from '../utils/paths';
+
+const lang = Astro.currentLocale || 'nl';
+const t = useTranslations(lang);
 
 <header class="fixed top-0 left-0 w-full bg-[var(--primary-bg)] z-50">
   <nav class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
