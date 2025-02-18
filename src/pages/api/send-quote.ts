@@ -3,10 +3,12 @@ import nodemailer from 'nodemailer';
 
 // Create reusable transporter object using SMTP transport
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: "smtp.gmail.com", // or your SMTP server
+  port: 587,
+  secure: false, // true for 465, false for other ports
   auth: {
-    user: process.env.NOTIFICATION_EMAIL,
-    pass: process.env.NOTIFICATION_EMAIL_PASSWORD
+    user: "alikaya@heatnederland.nl", // your email
+    pass: import.meta.env.SMTP_PASSWORD // get password from environment variable
   }
 });
 
@@ -14,34 +16,43 @@ export const POST: APIRoute = async ({ request }) => {
   try {
     const data = await request.json();
     
+    // Format the service name to be more readable
+    const serviceNames = {
+      airco: "Air Conditioning",
+      badkamer: "Bathroom Installation",
+      heating: "Heating Systems",
+      vloerverwarming: "Floor Heating"
+    };
+
     // Format the email content
     const emailContent = `
 New Quote Request
 
-Service: ${data.serviceId}
+Service: ${serviceNames[data.serviceId as keyof typeof serviceNames]}
 
 Customer Information:
 - Name: ${data.formData.name}
 - Email: ${data.formData.email}
 - Phone: ${data.formData.phone}
+- Address: ${data.formData.address}
 
 Service Details:
 ${Object.entries(data.formData)
-  .filter(([key]) => !['name', 'email', 'phone', 'comments'].includes(key))
+  .filter(([key]) => !['name', 'email', 'phone', 'address', 'comments'].includes(key))
   .map(([key, value]) => `- ${key}: ${value}`)
-  .join('\n')} 
+  .join('\n')}
 
-Price Range:
-€${data.priceRange.min} - €${data.priceRange.max}
+Price Quote: €${data.priceRange.min}
 
 Additional Comments:
-${data.formData.comments || 'None'}`;
+${data.formData.comments || 'None'}
+    `;
 
-    // Send email to both addresses
+    // Send email
     await transporter.sendMail({
-      from: process.env.NOTIFICATION_EMAIL,
-      to: [process.env.NOTIFICATION_EMAIL_1, process.env.NOTIFICATION_EMAIL_2].join(','),
-      subject: `New Quote Request - ${data.serviceId}`,
+      from: '"HeatNederland Quote System" <alikaya@heatnederland.nl>',
+      to: "alikaya@heatnederland.nl",
+      subject: `New Quote Request - ${serviceNames[data.serviceId as keyof typeof serviceNames]}`,
       text: emailContent,
     });
 
@@ -55,7 +66,10 @@ ${data.formData.comments || 'None'}`;
     });
   } catch (error) {
     console.error('Error:', error);
-    return new Response(JSON.stringify({ error: 'Failed to send quote' }), {
+    return new Response(JSON.stringify({ 
+      success: false, 
+      error: error instanceof Error ? error.message : 'Failed to send quote'
+    }), {
       status: 500,
       headers: {
         'Content-Type': 'application/json'

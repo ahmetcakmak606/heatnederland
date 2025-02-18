@@ -1,4 +1,3 @@
 export function getAssetPath(path: string): string {
-  const base = import.meta.env.BASE_URL || '';
-  return `${base}${path.startsWith('/') ? path : `/${path}`}`;
+  return path.startsWith('/') ? path : `/${path}`;
 } 

@@ -13,18 +13,66 @@
     "title": "Hizmetlerimiz",
     "airco": {
       "title": "Klima Sistemleri",
+      "fields": {
+        "squareMeters": "Metrekare",
+        "roomCount": "Oda Sayısı",
+        "buildingType": "Bina Tipi"
+      },
+      "options": {
+        "apartment": "Daire",
+        "house": "Ev",
+        "office": "Ofis",
+        "other": "Diğer"
+      },
       "description": "Optimum iç mekan iklim kontrolü için profesyonel klima sistemi kurulumu ve bakımı."
     },
     "badkamer": {
       "title": "Banyo Kurulumu",
+      "fields": {
+        "bathroomSize": "Banyo Büyüklüğü",
+        "renovationType": "Yenileme Tipi",
+        "currentState": "Mevcut Durum"
+      },
+      "options": {
+        "complete": "Tam Yenileme",
+        "partial": "Kısmi Yenileme",
+        "installOnly": "Sadece Kurulum",
+        "new": "Yeni",
+        "existing": "Mevcut",
+        "empty": "Boş"
+      },
       "description": "Detaylara özen gösterilerek yapılan komple banyo yenileme ve kurulum hizmetleri."
     },
     "heating": {
       "title": "Isıtma Sistemleri",
+      "fields": {
+        "houseSize": "Ev Büyüklüğü",
+        "currentSystem": "Mevcut Sistem",
+        "buildingYear": "Bina Yılı"
+      },
+      "options": {
+        "centralHeating": "Merkezi Isıtma",
+        "heatPump": "Isı Pompası",
+        "none": "Yok",
+        "other": "Diğer"
+      },
       "description": "Eviniz veya işyeriniz için uzman ısıtma sistemi kurulumu ve bakımı."
     },
     "vloerverwarming": {
       "title": "Yerden Isıtma",
+      "fields": {
+        "floorArea": "Zemin Alanı",
+        "floorType": "Zemin Tipi",
+        "currentHeating": "Mevcut Isıtma"
+      },
+      "options": {
+        "existing": "Mevcut",
+        "new": "Yeni",
+        "renovation": "Yenileme",
+        "radiators": "Radyatörler",
+        "none": "Yok",
+        "other": "Diğer"
+      },
       "description": "Maksimum konfor için enerji tasarruflu yerden ısıtma çözümleri."
     }
   },
@@ -46,5 +94,13 @@
       "thankYou": "İlginiz için teşekkür ederiz! Ek bilgiye ihtiyacımız olursa sizinle iletişime geçeceğiz.",
       "close": "Kapat"
     }
+  },
+  "form": {
+    "fullName": "Ad Soyad",
+    "email": "E-posta Adresi",
+    "phone": "Telefon Numarası",
+    "address": "Adres",
+    "comments": "Yorumlar",
+    "select": "Seçenek belirleyin"
   }
 } 

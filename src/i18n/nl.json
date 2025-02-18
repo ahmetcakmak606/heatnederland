@@ -1,0 +1,26 @@
+{
+  "services": {
+    "airco": {
+      "title": "Airconditioning",
+      "fields": {
+        "squareMeters": "Vierkante meters",
+        "roomCount": "Aantal kamers",
+        "buildingType": "Type gebouw"
+      },
+      "options": {
+        "apartment": "Appartement",
+        "house": "Huis",
+        "office": "Kantoor",
+        "other": "Anders"
+      }
+    }
+  },
+  "form": {
+    "fullName": "Volledige naam",
+    "email": "E-mailadres",
+    "phone": "Telefoonnummer",
+    "address": "Adres",
+    "comments": "Opmerkingen",
+    "select": "Selecteer een optie"
+  }
+} 

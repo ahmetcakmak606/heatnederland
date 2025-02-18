@@ -13,18 +13,66 @@
     "title": "Our Services",
     "airco": {
       "title": "Air Conditioning",
+      "fields": {
+        "squareMeters": "Square Meters",
+        "roomCount": "Number of Rooms",
+        "buildingType": "Building Type"
+      },
+      "options": {
+        "apartment": "Apartment",
+        "house": "House",
+        "office": "Office",
+        "other": "Other"
+      },
       "description": "Professional installation and maintenance of air conditioning systems for optimal indoor climate control."
     },
     "badkamer": {
       "title": "Bathroom Installation",
+      "fields": {
+        "bathroomSize": "Bathroom Size",
+        "renovationType": "Renovation Type",
+        "currentState": "Current State"
+      },
+      "options": {
+        "complete": "Complete Renovation",
+        "partial": "Partial Renovation",
+        "installOnly": "Installation Only",
+        "new": "New",
+        "existing": "Existing",
+        "empty": "Empty"
+      },
       "description": "Complete bathroom renovation and installation services with attention to detail."
     },
     "heating": {
       "title": "Heating Systems",
+      "fields": {
+        "houseSize": "House Size",
+        "currentSystem": "Current System",
+        "buildingYear": "Building Year"
+      },
+      "options": {
+        "centralHeating": "Central Heating",
+        "heatPump": "Heat Pump",
+        "none": "None",
+        "other": "Other"
+      },
       "description": "Expert installation and maintenance of heating systems for your home or business."
     },
     "vloerverwarming": {
       "title": "Floor Heating",
+      "fields": {
+        "floorArea": "Floor Area",
+        "floorType": "Floor Type",
+        "currentHeating": "Current Heating"
+      },
+      "options": {
+        "existing": "Existing",
+        "new": "New",
+        "renovation": "Renovation",
+        "radiators": "Radiators",
+        "none": "None",
+        "other": "Other"
+      },
       "description": "Energy-efficient floor heating solutions for maximum comfort."
     }
   },
@@ -46,5 +94,13 @@
       "thankYou": "Thank you for your interest! We will contact you if we need additional information.",
       "close": "Close"
     }
+  },
+  "form": {
+    "fullName": "Full Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "address": "Address",
+    "comments": "Comments",
+    "select": "Select an option"
   }
 } 

@@ -13,18 +13,66 @@
     "title": "Onze Diensten",
     "airco": {
       "title": "Airconditioning",
+      "fields": {
+        "squareMeters": "Vierkante meters",
+        "roomCount": "Aantal kamers",
+        "buildingType": "Type gebouw"
+      },
+      "options": {
+        "apartment": "Appartement",
+        "house": "Huis",
+        "office": "Kantoor",
+        "other": "Anders"
+      },
       "description": "Professionele installatie en onderhoud van airconditioningsystemen voor optimale klimaatbeheersing."
     },
     "badkamer": {
       "title": "Badkamer Installatie",
+      "fields": {
+        "bathroomSize": "Badkamer grootte",
+        "renovationType": "Type renovatie",
+        "currentState": "Huidige staat"
+      },
+      "options": {
+        "complete": "Complete renovatie",
+        "partial": "Gedeeltelijke renovatie",
+        "installOnly": "Alleen installatie",
+        "new": "Nieuw",
+        "existing": "Bestaand",
+        "empty": "Leeg"
+      },
       "description": "Complete badkamerrenovatie en installatiediensten met oog voor detail."
     },
     "heating": {
       "title": "Verwarmingssystemen",
+      "fields": {
+        "houseSize": "Woning grootte",
+        "currentSystem": "Huidig systeem",
+        "buildingYear": "Bouwjaar"
+      },
+      "options": {
+        "centralHeating": "CV-ketel",
+        "heatPump": "Warmtepomp",
+        "none": "Geen",
+        "other": "Anders"
+      },
       "description": "Deskundige installatie en onderhoud van verwarmingssystemen voor uw huis of bedrijf."
     },
     "vloerverwarming": {
       "title": "Vloerverwarming",
+      "fields": {
+        "floorArea": "Vloeroppervlak",
+        "floorType": "Type vloer",
+        "currentHeating": "Huidige verwarming"
+      },
+      "options": {
+        "existing": "Bestaand",
+        "new": "Nieuw",
+        "renovation": "Renovatie",
+        "radiators": "Radiatoren",
+        "none": "Geen",
+        "other": "Anders"
+      },
       "description": "Energiezuinige vloerverwarmingsoplossingen voor maximaal comfort."
     }
   },
@@ -46,5 +94,13 @@
       "thankYou": "Bedankt voor uw interesse! Wij nemen contact met u op als we aanvullende informatie nodig hebben.",
       "close": "Sluiten"
     }
+  },
+  "form": {
+    "fullName": "Volledige naam",
+    "email": "E-mailadres",
+    "phone": "Telefoonnummer",
+    "address": "Adres",
+    "comments": "Opmerkingen",
+    "select": "Selecteer een optie"
   }
 } 
