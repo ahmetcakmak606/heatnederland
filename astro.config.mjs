@@ -14,6 +14,6 @@ export default defineConfig({
       strategy: 'pathname'
     }
   },
-  site: 'https://heatnederland.nl',
-  base: '/',
+  site: 'https://ahmetcakmak606.github.io',
+  base: '/heatnederland',
 }); 
