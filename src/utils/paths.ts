@@ -1,3 +1,4 @@
 export function getAssetPath(path: string): string {
-  return path.startsWith('/') ? path : `/${path}`;
+  const base = '/heatnederland'; // Match your astro.config.mjs base
+  return `${base}${path.startsWith('/') ? path : `/${path}`}`;
 } 
