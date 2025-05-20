@@ -23,7 +23,7 @@ const t = useTranslations(lang);
         </div>
         
         <!-- Add Certificates -->
-        <div class="flex gap-4 mt-8">
+        <div class="flex flex-wrap gap-4 mt-8">
           <img 
             src={getAssetPath('/images/certificates/cert1.jpeg')}
             alt="KIWA Certification" 
@@ -32,6 +32,16 @@ const t = useTranslations(lang);
           <img 
             src={getAssetPath('/images/certificates/cert2.jpeg')}
             alt="CO2 Free Certification" 
+            class="h-24 object-contain"
+          />
+          <img 
+            src={getAssetPath('/images/certificates/cert3.png')}
+            alt="Lid van Techniek Nederland" 
+            class="h-24 object-contain"
+          />
+          <img 
+            src={getAssetPath('/images/certificates/cert4.png')}
+            alt="KIWA F-Gassen Certification" 
             class="h-24 object-contain"
           />
         </div>
