@@ -74,14 +74,6 @@ const services = [
       <div class="max-w-4xl mx-auto text-center px-4">
         <h2 class="text-4xl font-bold mb-6 text-gray-800">{service.title}</h2>
         <p class="text-xl text-gray-600">{service.description}</p>
-        
-        <!-- Add Quota Button -->
-        <button 
-          class="quota-btn fixed bottom-8 left-8 bg-[var(--primary-red)] text-[var(--primary-white)] px-6 py-3 rounded-lg shadow-lg hover:opacity-90 transition-colors z-10"
-          data-service={service.id}
-        >
-          {t('quote.requestQuote')}
-        </button>
       </div>
     </div>
   </section>
@@ -130,17 +122,6 @@ const services = [
 
   // Re-initialize Swipers when the page content updates
   document.addEventListener('astro:page-load', initSwipers);
-
-  // Add this after the existing Swiper initialization code
-  document.querySelectorAll('.quota-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Get current language from URL or default to root path
-      const currentPath = window.location.pathname;
-      const basePath = currentPath === '/' || currentPath === '/nl' ? '' : currentPath.split('/')[1];
-      // Navigate to contact section while preserving the language
-      window.location.href = basePath ? `/${basePath}/#contact` : '/#contact';
-    });
-  });
 </script>
 
 <style>
