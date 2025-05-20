@@ -5,10 +5,10 @@ import '../styles/colors.css';
 import { getAssetPath } from '../utils/paths';
 
 interface Props {
-  title: string;
+  title?: string;
 }
 
-const { title } = Astro.props;
+const { title = "HeatNederland - Uw Comfort is Onze Prioriteit" } = Astro.props;
 const currentLocale = Astro.currentLocale || 'nl';
 const t = useTranslations(currentLocale);
 
@@ -32,9 +32,12 @@ const languageLinks = [
 <html lang={currentLocale}>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href={getAssetPath('/favicon.svg')} />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="HeatNederland - Professionele installatie van airconditioning, badkamer, verwarming en vloerverwarming." />
+    <!-- Force reload CSS to avoid caching issues -->
+    <link rel="stylesheet" href={getAssetPath('/styles/global.css')} />
     <title>{title}</title>
   </head>
   <body>

@@ -1,0 +1,7 @@
+:root {
+  /* Using the logo colors */
+  --primary-red: #E31E24;    /* Red from the logo */
+  --primary-white: #FFFFFF;   /* White */
+  --primary-bg: #1E2A4A;     /* Dark blue from the logo */
+  --secondary-bg: #F5F5F5;   /* Light background */
+} 

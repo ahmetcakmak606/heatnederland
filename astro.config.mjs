@@ -14,6 +14,9 @@ export default defineConfig({
       strategy: 'pathname'
     }
   },
-  site: 'https://ahmetcakmak606.github.io',
-  base: '/heatnederland',
+  site: 'https://heatnederland.vercel.app',
+  base: '/',
+  build: {
+    assets: '_assets'
+  }
 }); 
