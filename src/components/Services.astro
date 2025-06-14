@@ -16,12 +16,12 @@ const services = [
     ]
   },
   {
-    id: 'badkamer',
-    title: t('services.badkamer.title'),
-    description: t('services.badkamer.description'),
+    id: 'warmtepomp',
+    title: t('services.warmtepomp.title'),
+    description: t('services.warmtepomp.description'),
     images: [
-      getAssetPath('/images/badkamer/1.png'),
-      getAssetPath('/images/badkamer/2.png')
+      getAssetPath('/images/warmtepomp/1.png'),
+      getAssetPath('/images/warmtepomp/2.png')
     ]
   },
   {
@@ -34,12 +34,12 @@ const services = [
     ]
   },
   {
-    id: 'vloerverwarming',
-    title: t('services.vloerverwarming.title'),
-    description: t('services.vloerverwarming.description'),
+    id: 'verwarminginstallatie',
+    title: t('services.verwarminginstallatie.title'),
+    description: t('services.verwarminginstallatie.description'),
     images: [
-      getAssetPath('/images/vloerverwarming/1.png'),
-      getAssetPath('/images/vloerverwarming/2.png')
+      getAssetPath('/images/verwarminginstallatie/1.png'),
+      getAssetPath('/images/verwarminginstallatie/2.png')
     ]
   }
 ];
@@ -93,7 +93,7 @@ const services = [
       return;
     }
 
-    const services = ['airco', 'badkamer', 'heating', 'vloerverwarming'];
+    const services = ['airco', 'warmtepomp', 'heating', 'verwarminginstallatie'];
     
     services.forEach(serviceId => {
       const swiperElement = document.querySelector(`#swiper-${serviceId}`);

@@ -26,22 +26,11 @@
       },
       "description": "Professionele installatie en onderhoud van airconditioningsystemen voor optimale klimaatbeheersing."
     },
-    "badkamer": {
-      "title": "Badkamer Installatie",
-      "fields": {
-        "bathroomSize": "Badkamer grootte",
-        "renovationType": "Type renovatie",
-        "currentState": "Huidige staat"
-      },
-      "options": {
-        "complete": "Complete renovatie",
-        "partial": "Gedeeltelijke renovatie",
-        "installOnly": "Alleen installatie",
-        "new": "Nieuw",
-        "existing": "Bestaand",
-        "empty": "Leeg"
-      },
-      "description": "Complete badkamerrenovatie en installatiediensten met oog voor detail."
+    "warmtepomp": {
+      "title": "Warmtepomp Installatie",
+      "description": "Professionele installatie van warmtepompen voor een duurzame en efficiënte verwarming van uw woning.",
+      "bathroomSize": "Woning oppervlakte",
+      "existing": "Bestaande verwarming"
     },
     "heating": {
       "title": "Verwarmingssystemen",
@@ -58,22 +47,9 @@
       },
       "description": "Deskundige installatie en onderhoud van verwarmingssystemen voor uw huis of bedrijf."
     },
-    "vloerverwarming": {
-      "title": "Vloerverwarming",
-      "fields": {
-        "floorArea": "Vloeroppervlak",
-        "floorType": "Type vloer",
-        "currentHeating": "Huidige verwarming"
-      },
-      "options": {
-        "existing": "Bestaand",
-        "new": "Nieuw",
-        "renovation": "Renovatie",
-        "radiators": "Radiatoren",
-        "none": "Geen",
-        "other": "Anders"
-      },
-      "description": "Energiezuinige vloerverwarmingsoplossingen voor maximaal comfort."
+    "verwarminginstallatie": {
+      "title": "Verwarming Installatie",
+      "description": "Complete verwarmingsinstallaties voor optimaal comfort in uw woning."
     }
   },
   "contact": {
@@ -102,5 +78,9 @@
     "address": "Adres",
     "comments": "Opmerkingen",
     "select": "Selecteer een optie"
+  },
+  "vision": {
+    "title": "Onze Visie",
+    "text": "Bij Heat Nederland is het onze visie om innovatieve en duurzame verwarmings- en koeloplossingen te bieden die de verwachtingen van zowel zakelijke (B2B) als particuliere (B2C) klanten overtreffen. Met onze technische expertise, geavanceerde apparatuur en alle benodigde certificeringen garanderen we een service gericht op betrouwbaarheid en kwaliteit. Als lid van Techniek Nederland houden wij ons aan de hoogste normen in de branche en staan we bij elk project voor professionaliteit en uitmuntendheid. Ons doel is altijd om klanttevredenheid centraal te stellen en langdurige, betrouwbare relaties op te bouwen."
   }
 } 

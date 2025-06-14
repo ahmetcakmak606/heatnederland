@@ -26,22 +26,11 @@
       },
       "description": "Professional installation and maintenance of air conditioning systems for optimal indoor climate control."
     },
-    "badkamer": {
-      "title": "Bathroom Installation",
-      "fields": {
-        "bathroomSize": "Bathroom Size",
-        "renovationType": "Renovation Type",
-        "currentState": "Current State"
-      },
-      "options": {
-        "complete": "Complete Renovation",
-        "partial": "Partial Renovation",
-        "installOnly": "Installation Only",
-        "new": "New",
-        "existing": "Existing",
-        "empty": "Empty"
-      },
-      "description": "Complete bathroom renovation and installation services with attention to detail."
+    "warmtepomp": {
+      "title": "Heat Pump Installation",
+      "description": "Professional installation of heat pumps for sustainable and efficient home heating.",
+      "bathroomSize": "House area",
+      "existing": "Existing heating"
     },
     "heating": {
       "title": "Heating Systems",
@@ -58,22 +47,9 @@
       },
       "description": "Expert installation and maintenance of heating systems for your home or business."
     },
-    "vloerverwarming": {
-      "title": "Floor Heating",
-      "fields": {
-        "floorArea": "Floor Area",
-        "floorType": "Floor Type",
-        "currentHeating": "Current Heating"
-      },
-      "options": {
-        "existing": "Existing",
-        "new": "New",
-        "renovation": "Renovation",
-        "radiators": "Radiators",
-        "none": "None",
-        "other": "Other"
-      },
-      "description": "Energy-efficient floor heating solutions for maximum comfort."
+    "verwarminginstallatie": {
+      "title": "Heating Installation",
+      "description": "Complete heating installations for optimal comfort in your home."
     }
   },
   "contact": {
@@ -102,5 +78,9 @@
     "address": "Address",
     "comments": "Comments",
     "select": "Select an option"
+  },
+  "vision": {
+    "title": "Our Vision",
+    "text": "At Heat Nederland, our vision is to provide innovative and sustainable heating and cooling solutions that exceed the expectations of both business (B2B) and private (B2C) customers. With our technical expertise, advanced equipment, and all necessary certifications, we guarantee service focused on reliability and quality. As a member of Techniek Nederland, we adhere to the highest industry standards and stand for professionalism and excellence in every project. Our goal is always to put customer satisfaction first and build long-term, reliable relationships."
   }
 } 
