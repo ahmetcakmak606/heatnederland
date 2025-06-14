@@ -15,9 +15,9 @@ const t = useTranslations(currentLocale);
 const navItems = [
   { id: 'home', label: t('nav.home') },
   { id: 'airco', label: t('services.airco.title') },
-  { id: 'badkamer', label: t('services.badkamer.title') },
+  { id: 'warmtepomp', label: t('services.warmtepomp.title') },
   { id: 'heating', label: t('services.heating.title') },
-  { id: 'vloerverwarming', label: t('services.vloerverwarming.title') },
+  { id: 'verwarminginstallatie', label: t('services.verwarminginstallatie.title') },
   { id: 'contact', label: t('nav.contact') },
 ];
 
@@ -35,7 +35,7 @@ const languageLinks = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href={getAssetPath('/favicon.svg')} />
     <meta name="generator" content={Astro.generator} />
-    <meta name="description" content="HeatNederland - Professionele installatie van airconditioning, badkamer, verwarming en vloerverwarming." />
+    <meta name="description" content="HeatNederland - Professionele installatie van airconditioning, warmtepomp, verwarming en verwarminginstallatie." />
     <!-- Force reload CSS to avoid caching issues -->
     <link rel="stylesheet" href={getAssetPath('/styles/global.css')} />
     <title>{title}</title>

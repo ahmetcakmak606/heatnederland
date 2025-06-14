@@ -87,6 +87,16 @@
         "none": "Yok",
         "other": "Diğer"
       }
+    },
+    "warmtepomp": {
+      "title": "Isı Pompası Kurulumu",
+      "description": "Sürdürülebilir ve verimli ev ısıtması için profesyonel ısı pompası kurulumu.",
+      "bathroomSize": "Ev alanı",
+      "existing": "Mevcut ısıtma"
+    },
+    "verwarminginstallatie": {
+      "title": "Isıtma Kurulumu",
+      "description": "Evinizde optimal konfor için tam ısıtma kurulumları."
     }
   },
   "form": {

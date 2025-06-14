@@ -87,6 +87,16 @@
         "none": "Geen",
         "other": "Anders"
       }
+    },
+    "warmtepomp": {
+      "title": "Warmtepomp Installatie",
+      "description": "Professionele installatie van warmtepompen voor een duurzame en efficiënte verwarming van uw woning.",
+      "bathroomSize": "Woning oppervlakte",
+      "existing": "Bestaande verwarming"
+    },
+    "verwarminginstallatie": {
+      "title": "Verwarming Installatie",
+      "description": "Complete verwarmingsinstallaties voor optimaal comfort in uw woning."
     }
   },
   "form": {

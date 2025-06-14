@@ -87,6 +87,16 @@
         "none": "None",
         "other": "Other"
       }
+    },
+    "warmtepomp": {
+      "title": "Heat Pump Installation",
+      "description": "Professional installation of heat pumps for sustainable and efficient home heating.",
+      "bathroomSize": "House area",
+      "existing": "Existing heating"
+    },
+    "verwarminginstallatie": {
+      "title": "Heating Installation",
+      "description": "Complete heating installations for optimal comfort in your home."
     }
   },
   "form": {
