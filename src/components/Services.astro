@@ -12,9 +12,7 @@ const services = [
     description: t('services.airco.description'),
     images: [
       getAssetPath('/images/airco/1.png'),
-      getAssetPath('/images/airco/1.jpg'),
-      getAssetPath('/images/airco/2.png'),
-      getAssetPath('/images/airco/2.jpg')
+      getAssetPath('/images/airco/2.png')
     ]
   },
   {
@@ -23,9 +21,7 @@ const services = [
     description: t('services.warmtepomp.description'),
     images: [
       getAssetPath('/images/warmtepomp/1.png'),
-      getAssetPath('/images/warmtepomp/1.jpg'),
-      getAssetPath('/images/warmtepomp/2.png'),
-      getAssetPath('/images/warmtepomp/2.jpg')
+      getAssetPath('/images/warmtepomp/2.png')
     ]
   },
   {
@@ -34,9 +30,7 @@ const services = [
     description: t('services.heating.description'),
     images: [
       getAssetPath('/images/heating/1.png'),
-      getAssetPath('/images/heating/1.jpg'),
-      getAssetPath('/images/heating/2.png'),
-      getAssetPath('/images/heating/2.jpg')
+      getAssetPath('/images/heating/2.png')
     ]
   },
   {
@@ -45,16 +39,14 @@ const services = [
     description: t('services.verwarminginstallatie.description'),
     images: [
       getAssetPath('/images/verwarminginstallatie/1.png'),
-      getAssetPath('/images/verwarminginstallatie/1.jpg'),
-      getAssetPath('/images/verwarminginstallatie/2.png'),
-      getAssetPath('/images/verwarminginstallatie/2.jpg')
+      getAssetPath('/images/verwarminginstallatie/2.png')
     ]
   }
 ];
 ---
 
 {services.map(service => (
-  <section id={service.id} class="scroll-section flex flex-col relative">
+  <section id={service.id} class="scroll-section flex flex-col relative pt-28 mb-16">
     <!-- Image Section -->
     <div class="h-[70vh] relative">
       <div class="swiper h-full" id={`swiper-${service.id}`}>
@@ -80,7 +72,6 @@ const services = [
     <!-- Text Section -->
     <div class="bg-white py-10 relative">
       <div class="max-w-4xl mx-auto text-center px-4">
-        <h2 class="text-4xl font-bold mb-6 text-gray-800">{service.title}</h2>
         <p class="text-xl text-gray-600">{service.description}</p>
       </div>
     </div>

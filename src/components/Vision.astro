@@ -5,9 +5,8 @@ const lang = Astro.currentLocale || 'nl';
 const t = useTranslations(lang);
 ---
 
-<section id="vision" class="bg-gray-50 py-16 mb-16 scroll-section">
+<section id="vision" class="scroll-section bg-gray-50 min-h-screen flex items-center justify-center pt-28 pb-16">
   <div class="max-w-4xl mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">{t('vision.title')}</h2>
     <div class="prose prose-lg mx-auto text-gray-600">
       <p>{t('vision.text')}</p>
     </div>

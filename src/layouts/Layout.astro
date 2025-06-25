@@ -58,7 +58,7 @@ const languageLinks = [
             {navItems.map(item => (
               <a 
                 href={`#${item.id}`} 
-                class="px-3 py-2 text-[var(--primary-white)] hover:text-[var(--primary-red)] transition-colors"
+                class="nav-link px-3 py-2 text-[var(--primary-white)] hover:text-[var(--primary-red)] transition-colors"
               >
                 {item.label}
               </a>
@@ -87,7 +87,7 @@ const languageLinks = [
       {navItems.map(item => (
         <a
           href={`#${item.id}`}
-          class="block w-3 h-3 rounded-full bg-white border-2 border-blue-600 hover:bg-blue-600 transition-colors"
+          class="nav-dot block w-3 h-3 rounded-full bg-white border-2 border-blue-600 hover:bg-blue-600 transition-colors"
           title={item.label}
         />
       ))}
@@ -99,11 +99,64 @@ const languageLinks = [
   </body>
 </html>
 
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('.scroll-section');
+    const navLinks = document.querySelectorAll('nav .nav-link');
+    const navDots = document.querySelectorAll('.nav-dot');
+
+    const activateNav = (id) => {
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+      });
+      navDots.forEach(dot => {
+        dot.classList.toggle('active', dot.getAttribute('href') === `#${id}`);
+      });
+    };
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          activateNav(entry.target.id);
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+  });
+</script>
+
 <style>
   .scroll-container {
     height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+  }
+  nav {
+    font-size: 1rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+  .nav-link.active {
+    font-weight: 700;
+    color: var(--primary-red);
+  }
+  .nav-dot.active {
+    background: var(--primary-red);
+  }
+  .md\:flex.items-center.space-x-4.py-2 > a {
+    font-size: 1rem;
+    padding: 0.25rem 0.75rem;
+  }
+  .md\:flex.items-center.space-x-4.py-2 > .flex.space-x-2 > a {
+    font-size: 0.95rem;
+    padding: 0.15rem 0.5rem;
   }
 </style>
